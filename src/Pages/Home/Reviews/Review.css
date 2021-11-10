@@ -1,0 +1,23 @@
+.reviews{
+    text-align: center;
+    margin: 10rem 0;
+}
+
+.reviewTitle{
+    margin-bottom: 5rem;
+    font-weight: 600;
+    font-size: 2.7rem;
+}
+
+.reviewCart{
+    /* border: 1px solid red; */
+    padding: 15px;
+}
+
+.reviewCart h6{
+    margin: 15px 0px;
+}
+
+.reviewCart p{
+    color: #666;
+}
