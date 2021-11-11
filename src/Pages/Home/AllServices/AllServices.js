@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Header from '../../Shared/Header/Header';
 import Footer from '../../Shared/Footer/Footer';
+import { NavLink } from 'react-router-dom';
 
 const AllServices = () => {
     const [allServices, setAllServices] = useState([]);
@@ -30,7 +31,10 @@ const AllServices = () => {
                                     <p>$ {service.price}</p>
                                     <h2>{service.name}</h2>
                                     <p>{service.shortDesc}</p>
-                                    <Button variant="contained" sx={{ mt: 2, backgroundColor: 'rgb(23,23,219)' }}>BUY NOW</Button>
+
+                                    <NavLink to={`/purchase/${service._id}`} style={{ textDecoration: "none" }}>
+                                        <Button variant="contained" sx={{ mt: 2, backgroundColor: 'rgb(23,23,219)' }}>BUY NOW</Button>
+                                    </NavLink>
                                 </div>
                             </div>
                         </div>)

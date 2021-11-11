@@ -4,8 +4,11 @@ import { NavLink } from 'react-router-dom';
 import './Header.css'
 
 import logo from '../../../img/logo.png'
+import useAuth from '../../../hooks/useAuth';
+import { Box } from '@mui/material';
 
 const Header = () => {
+    const { user, logOut } = useAuth();
     return (
         <Navbar collapseOnSelect expand="lg" bg="" className='navbar' variant="light">
             <Container>
@@ -18,12 +21,23 @@ const Header = () => {
 
                     </Nav>
                     <Nav>
-                        <NavLink className='navlink' activeStyle={{
-                            fontWeight: "600",
-                            color: "black"
-                        }} to='/home'>Dashboard</NavLink>
-                        <NavLink className='navlink' to='/home' >Logout</NavLink>
-                        <NavLink className='navlink' to='/home' >Login</NavLink>
+                        {user?.email ? <Box>
+                            <NavLink className='navlink' activeStyle={{
+                                fontWeight: "600",
+                                color: "black"
+                            }} to='/home'>Dashboard</NavLink>
+                            <NavLink className='navlink' activeStyle={{
+                                fontWeight: "600",
+                                color: "black"
+                            }} to='/home'>{user?.displayName}</NavLink>
+                            <NavLink className='navlink' to='/home' onClick={logOut}>Logout</NavLink>
+                        </Box>
+                            :
+                            <NavLink className='navlink' to='/login' activeStyle={{
+                                fontWeight: "600",
+                                color: "black"
+                            }}>Login</NavLink>
+                        }
 
                     </Nav>
                 </Navbar.Collapse>
