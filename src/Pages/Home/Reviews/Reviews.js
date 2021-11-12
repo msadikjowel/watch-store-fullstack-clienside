@@ -1,6 +1,9 @@
-import React, { Component, useEffect, useState } from "react";
+import { Rating } from "@mui/material";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import './Review.css'
+
+
 
 
 
@@ -62,6 +65,8 @@ const Reviews = () => {
                         <div className="reviewCart">
                             <img style={{ width: '5rem', height: '5rem', borderRadius: '50%', margin: 'auto' }} src={review?.img} alt="" />
                             <h6>{review?.name}</h6>
+
+                            <Rating name="read-only" value={review?.rating} precision={0.5} readOnly /> <br />
                             <p>{review?.comments}</p>
                         </div>
 

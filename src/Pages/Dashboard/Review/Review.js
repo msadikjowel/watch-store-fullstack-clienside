@@ -53,6 +53,15 @@ const Review = () => {
                 <TextField
                     required
                     id="outlined-basic"
+                    label="Rating (1-5)"
+                    variant="outlined"
+                    {...register("rating")}
+                    sx={{ m: 2, width: '75%' }}
+                /> <br />
+
+                <TextField
+                    required
+                    id="outlined-basic"
                     label="Your Image URL"
                     variant="outlined"
                     {...register("img")}

@@ -79,7 +79,7 @@ const MyOrders = () => {
                             <StyledTableCell>Product Name</StyledTableCell>
                             <StyledTableCell align="center">Price</StyledTableCell>
                             <StyledTableCell align="center">User Phone</StyledTableCell>
-                            <StyledTableCell align="center">Shipping Addess</StyledTableCell>
+                            <StyledTableCell align="center">Shipping Address</StyledTableCell>
                             <StyledTableCell align="center">Status</StyledTableCell>
                             <StyledTableCell align="center">Action</StyledTableCell>
 
@@ -105,7 +105,7 @@ const MyOrders = () => {
                                         </NavLink>
 
                                         <Button
-                                            title="Delete product"
+                                            title="cancel order"
                                             sx={{ color: 'red' }}
                                             onClick={() => handleDeleteProduct(product._id)}
                                         >{deleteIcon}

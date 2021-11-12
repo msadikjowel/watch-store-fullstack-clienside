@@ -39,11 +39,9 @@ const useFirebase = () => {
             displayName: name
         }).then(() => {
             window.location.reload();
-            // const newUser = { ...user, displayName: name };
-            // setUser(newUser);
+
         }).catch((error) => {
-            // An error occurred
-            // ...
+
         });
     }
 
