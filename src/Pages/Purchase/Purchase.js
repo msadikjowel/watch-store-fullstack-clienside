@@ -33,7 +33,10 @@ const Purchase = () => {
     // react hook form
 
     const onSubmit = data => {
+
         delete data._id;
+        data.status = 'pending';
+
         fetch('http://localhost:5000/purchased', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },

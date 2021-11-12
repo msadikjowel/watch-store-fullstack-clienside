@@ -42,7 +42,7 @@ const Login = () => {
                     <Grid item xs={12} md={6}>
                         <img style={{ width: '100%' }} src={login} alt="" />
                     </Grid>
-                    <Grid item xs={12} md={6} sx={{ textAlign: 'center' }}>
+                    <Grid item xs={12} md={6} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <Typography variant='body1' gutterBottom sx={{ fontWeight: '600', fontSize: '1.3rem' }}>Login</Typography>
 
                         {!isLoading && <form onSubmit={handleLogin}>
@@ -65,15 +65,17 @@ const Login = () => {
                                 variant="standard"
                             /> <br />
 
+
+
+                            <Button
+                                sx={{ width: '25%', m: 1, backgroundColor: 'rgb(23,23,219)' }}
+                                variant="contained" type="submit">Login</Button>
+
                             <NavLink to='/register' style={{ textDecoration: 'none' }}>
                                 <Button
                                     sx={{ width: '75%', m: 1, color: 'rgb(23,23,219)', fontWeight: '500', textTransform: 'capitalize' }}
                                     variant="text" type="submit">New User? Please Register</Button>
                             </NavLink> <br />
-
-                            <Button
-                                sx={{ width: '25%', m: 1, backgroundColor: 'rgb(23,23,219)' }}
-                                variant="contained" type="submit">Login</Button>
 
                         </form>}
                         <br />

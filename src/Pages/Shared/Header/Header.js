@@ -25,7 +25,7 @@ const Header = () => {
                             <NavLink className='navlink' activeStyle={{
                                 fontWeight: "600",
                                 color: "black"
-                            }} to='/home'>Dashboard</NavLink>
+                            }} to='/dashboard'>Dashboard</NavLink>
                             <NavLink className='navlink' activeStyle={{
                                 fontWeight: "600",
                                 color: "black"

@@ -15,6 +15,8 @@ import Register from './Pages/Login/Register/Register';
 import AuthProvider from './context/AuthProvider/AuthProvider';
 import Purchase from './Pages/Purchase/Purchase';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
 
 const theme = createTheme({
   typography: {
@@ -58,6 +60,12 @@ function App() {
             <PrivateRoute path='/purchase/:id'>
               <Purchase></Purchase>
             </PrivateRoute>
+
+            <PrivateRoute path='/dashboard'>
+              <Dashboard></Dashboard>
+            </PrivateRoute>
+
+
 
           </Switch>
         </Router>

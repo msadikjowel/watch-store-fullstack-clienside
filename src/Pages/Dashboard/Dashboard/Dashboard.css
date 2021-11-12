@@ -1,0 +1,18 @@
+.dashLink{
+    text-decoration: none;
+    margin: 10px;
+    color: #666;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.logOut{
+    position: absolute;
+    /* left: 1rem; */
+    bottom: -15rem;
+}
+
+.dashActive{
+    font-weight: 600;
+    /* color: rgb(23,23,219); */
+}

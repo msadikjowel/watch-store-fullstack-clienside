@@ -5,21 +5,26 @@ import { getAuth, createUserWithEmailAndPassword, signOut, onAuthStateChanged, s
 initializeFirebase();
 
 const useFirebase = () => {
+
+    // all state
     const [user, setUser] = useState({});
-
     const [isLoading, setIsLoading] = useState(true);
-
     const [authError, setAuthError] = useState('')
+    const [admin, setAdmin] = useState(false);
+
 
     const auth = getAuth();
 
     // register user
-    const registerUser = (name, email, password) => {
+    const registerUser = (name, email, password, history, location) => {
         setIsLoading(true);
 
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 updateName(name);
+                saveUser(email, name);
+                const destination = 'home';
+                history.replace(destination);
                 setAuthError('');
             })
             .catch((error) => {
@@ -33,8 +38,9 @@ const useFirebase = () => {
         updateProfile(auth.currentUser, {
             displayName: name
         }).then(() => {
-            // Profile updated!
-            // ...
+            window.location.reload();
+            // const newUser = { ...user, displayName: name };
+            // setUser(newUser);
         }).catch((error) => {
             // An error occurred
             // ...
@@ -70,7 +76,16 @@ const useFirebase = () => {
             setIsLoading(false);
         });
         return () => unsubscribe;
-    }, [])
+    }, []);
+
+
+    // checking admin or not
+    useEffect(() => {
+        fetch(`http://localhost:5000/users/${user.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
+    }, [user.email]);
+
 
 
     // signout
@@ -82,11 +97,23 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     }
 
+    // save user to database
+    const saveUser = (email, displayName) => {
+        const user = { email, displayName };
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(user)
+        })
+            .then()
+    }
+
 
     return {
         user,
         isLoading,
         authError,
+        admin,
         registerUser,
         logOut,
         loginUser,
