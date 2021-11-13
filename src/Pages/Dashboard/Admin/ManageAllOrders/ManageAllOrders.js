@@ -24,7 +24,7 @@ const ManageAllOrders = () => {
     const [updateStatusSuccess, setUpdateStatusSuccess] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allPurchased`)
+        fetch(`https://radiant-brook-77884.herokuapp.com/allPurchased`)
             .then(res => res.json())
             .then(data => setAllPurchased(data))
     }, []);
@@ -55,7 +55,7 @@ const ManageAllOrders = () => {
     const handleDeleteProduct = id => {
         const proceed = window.confirm('Are you sure to delete this product?');
         if (proceed) {
-            fetch(`http://localhost:5000/purchaseDelete/${id}`, {
+            fetch(`https://radiant-brook-77884.herokuapp.com/purchaseDelete/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -74,7 +74,7 @@ const ManageAllOrders = () => {
     const handleUpdateStatus = id => {
         const proceed = window.confirm('Are you sure to APPROVE this order?')
         if (proceed) {
-            fetch(`http://localhost:5000/updateStatus/${id}`, {
+            fetch(`https://radiant-brook-77884.herokuapp.com/updateStatus/${id}`, {
                 method: 'PUT',
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(allPurchased)

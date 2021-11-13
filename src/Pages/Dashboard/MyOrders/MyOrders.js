@@ -24,7 +24,7 @@ const MyOrders = () => {
     const [deleteSuccess, setDeleteSuccess] = useState(false)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/purchased?email=${user.email}`)
+        fetch(`https://radiant-brook-77884.herokuapp.com/purchased?email=${user.email}`)
             .then(res => res.json())
             .then(data => setPurchased(data))
     }, []);
@@ -55,7 +55,7 @@ const MyOrders = () => {
     const handleDeleteProduct = id => {
         const proceed = window.confirm('Are you sure to delete this product?');
         if (proceed) {
-            fetch(`http://localhost:5000/purchaseDelete/${id}`, {
+            fetch(`https://radiant-brook-77884.herokuapp.com/purchaseDelete/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

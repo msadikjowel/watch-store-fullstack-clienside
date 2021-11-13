@@ -17,6 +17,8 @@ import Purchase from './Pages/Purchase/Purchase';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
+import Profile from './Pages/Profile/Profile';
+import NotFound from './Pages/NotFound/NotFound';
 
 const theme = createTheme({
   typography: {
@@ -53,6 +55,10 @@ function App() {
               <Login></Login>
             </Route>
 
+            <Route path='/profile'>
+              <Profile></Profile>
+            </Route>
+
             <Route path='/register'>
               <Register></Register>
             </Route>
@@ -64,6 +70,10 @@ function App() {
             <PrivateRoute path='/dashboard'>
               <Dashboard></Dashboard>
             </PrivateRoute>
+
+            <Route path='*'>
+              <NotFound></NotFound>
+            </Route>
 
 
 

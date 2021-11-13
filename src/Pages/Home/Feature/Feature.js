@@ -3,7 +3,7 @@ import './Feature.css'
 
 const Feature = () => {
     return (
-        <div className="subscribe-container">
+        <div className="subscribe-container" style={{ marginBottom: '10rem' }}>
             <h2>Core Functionality of a Smart Watch</h2>
             <h3>Features</h3>
 

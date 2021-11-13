@@ -22,7 +22,7 @@ const Purchase = () => {
     const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/purchase/${id}`)
+        fetch(`https://radiant-brook-77884.herokuapp.com/purchase/${id}`)
             .then(res => res.json())
             .then(data => {
                 setProduct(data);
@@ -37,7 +37,7 @@ const Purchase = () => {
         delete data._id;
         data.status = 'pending';
 
-        fetch('http://localhost:5000/purchased', {
+        fetch('https://radiant-brook-77884.herokuapp.com/purchased', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)

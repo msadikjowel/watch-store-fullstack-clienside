@@ -21,7 +21,7 @@ const ManageProducts = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allProducts`)
+        fetch(`https://radiant-brook-77884.herokuapp.com/allProducts`)
             .then(res => res.json())
             .then(data => setAllProducts(data))
     }, []);
@@ -52,7 +52,7 @@ const ManageProducts = () => {
     const handleDeleteProduct = id => {
         const proceed = window.confirm('Are you sure to delete this product?');
         if (proceed) {
-            fetch(`http://localhost:5000/productDelete/${id}`, {
+            fetch(`https://radiant-brook-77884.herokuapp.com/productDelete/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

@@ -29,7 +29,7 @@ const Header = () => {
                             <NavLink className='navlink' activeStyle={{
                                 fontWeight: "600",
                                 color: "black"
-                            }} to='/home'>{user?.displayName}</NavLink>
+                            }} to='/profile'>{user?.displayName}</NavLink>
                             <NavLink className='navlink' to='/home' onClick={logOut}>Logout</NavLink>
                         </Box>
                             :

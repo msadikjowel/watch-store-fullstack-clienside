@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 const AllServices = () => {
     const [allServices, setAllServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/allServices')
+        fetch('https://radiant-brook-77884.herokuapp.com/allServices')
             .then(res => res.json())
             .then(data => setAllServices(data));
     }, [])
