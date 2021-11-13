@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# Watch Station
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live site link [Watch Sation](https://watch-station-msadikjowel.web.app/).
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+This is a simple watch store website built with React, Firebase, MongoDB, etc. Customers can make orders and see their order progress in the user's dashboard. Basically, this website was built to showcase Watch Station's products to the customer. Payment functionality is underway. 
 
-### `npm start`
+### Core Features and Functionality
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+What Users can do-
+ - A user can make an order from Watch Station's official website.
+ - User can cancel their order anytime.
+ - User can see their order progress under User Dashboard. 
+ - Users can make reviews for products and also they can view their reviews on Home Page with dynamic star ratings that they are given when posting review. 
+ - Users can watch our special video which is made with our watch's features and functionality.
+ - When ordering, users have to put their phone number and shipping address in the billing information.
+ - Users have to register first to make an order with email and password. 
+ - If a user has already registered he/she have to log in to make an order. 
+ 
+What Admin can do-
+ - An admin can manage all orders that are submitted to the database.
+ - Admin can cancel the order and approve default pending status after payment.
+ - Admin can add products.
+ - Admin can view all products under Admin dashboard and can make changes or delete any products permanently.
+ - Admin can make a user to admin. 
