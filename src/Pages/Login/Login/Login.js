@@ -12,12 +12,12 @@ const Login = () => {
     // all state
     const [loginData, setLoginData] = useState({})
 
-    const { user, loginUser, isLoading, authError } = useAuth();
+    const { user, loginUser, isLoading, authError, signInUsingGoogle, setUser } = useAuth();
 
     // for redirect login page to user's desired page
     const location = useLocation();
     const history = useHistory();
-
+    const redirect_uri = location.state?.from || '/home';
     // handle on change value
     const handleOnChange = e => {
         const field = e.target.name;
@@ -33,6 +33,14 @@ const Login = () => {
         loginUser(loginData.email, loginData.password, history, location);
         e.preventDefault();
     };
+
+    const handleGoogleLogin = () => {
+        signInUsingGoogle()
+            .then(result => {
+                setUser(result.user);
+                history.push(redirect_uri);
+            })
+    }
 
     return (
         <>
@@ -69,7 +77,10 @@ const Login = () => {
 
                             <Button
                                 sx={{ width: '25%', m: 1, backgroundColor: 'rgb(23,23,219)' }}
-                                variant="contained" type="submit">Login</Button>
+                                variant="contained" type="submit">Login</Button> <br />
+                            <Button onClick={handleGoogleLogin}
+                                sx={{ width: '50%', m: 1, backgroundColor: 'rgb(23,23,219)' }}
+                                variant="contained" >Google Login</Button>
 
                             <NavLink to='/register' style={{ textDecoration: 'none' }}>
                                 <Button
@@ -85,7 +96,7 @@ const Login = () => {
 
                         {user?.email && <Alert severity="success">Login Successfull !</Alert>}
 
-                        {authError && <Alert severity="error">{authError}</Alert>
+                        {authError && <Alert severity="error">Login failed. Please check your email and password then try again.</Alert>
                         }
                     </Grid>
 

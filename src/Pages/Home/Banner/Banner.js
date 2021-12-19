@@ -8,14 +8,14 @@ import { NavLink } from 'react-router-dom';
 
 const Banner = () => {
     return (
-        <Box sx={{ flexGrow: 1, minHeight: '70vh', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#F7F7F7', py: 5 }}>
+        <Box id='banner' sx={{ flexGrow: 1, minHeight: '70vh', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#F7F7F7', py: 5 }}>
             <Container>
                 <Grid container spacing={2} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <Grid item xs={12} md={5} >
                         <Typography variant='p' sx={{ fontWeight: '500', fontSize: '14px', color: 'rgb(23,23,219)' }}>
                             YOUR WATCH YOUR STYLE
                         </Typography>
-                        <Typography variant='h2' sx={{ fontWeight: '700', mb: 1 }} className='bannerTitle'>
+                        <Typography variant='h2' sx={{ fontWeight: '700', mb: 1, }} id='bannerTitle'>
                             HAVE YOU EVER WORN A REAL WATCH
                         </Typography>
                         <Typography variant='p'>

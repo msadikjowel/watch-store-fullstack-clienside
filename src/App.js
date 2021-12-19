@@ -19,6 +19,7 @@ import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
 import Profile from './Pages/Profile/Profile';
 import NotFound from './Pages/NotFound/NotFound';
+import Reviews from './Pages/Home/Reviews/Reviews';
 
 const theme = createTheme({
   typography: {
@@ -46,6 +47,10 @@ function App() {
             <Route path='/home'>
               <Home></Home>
             </Route>
+
+            <Route path='*/#reviews'
+              component={Home}
+            />
 
             <Route path='/allServices'>
               <AllServices></AllServices>

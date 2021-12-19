@@ -5,12 +5,26 @@
     flex-direction: column;
     /* align-items: center; */
     justify-content: center;
+    margin-top: 5rem;
 }
 
 .reviewTitle{
+    position: relative;
     margin-bottom: 5rem;
     font-weight: 600;
     font-size: 2.7rem;
+}
+
+.reviewTitle:after{
+
+        content: '';
+        position: absolute;
+        background-color: rgb(23,23,219);
+        width: 10%;
+        height: 2px;
+        bottom: -10px;
+        left: 45%;
+
 }
 
 .reviewCart{

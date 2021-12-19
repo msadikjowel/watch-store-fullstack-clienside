@@ -1,5 +1,6 @@
 import { Rating } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import { Spinner } from "react-bootstrap";
 import Slider from "react-slick";
 import './Review.css'
 
@@ -46,35 +47,42 @@ const Reviews = () => {
 
 
     const [reviews, setReviews] = useState([]);
+    const [loading, setLoading] = useState(false)
     useEffect(() => {
         fetch('https://radiant-brook-77884.herokuapp.com/reviews')
             .then(res => res.json())
-            .then(data => setReviews(data));
+            .then(data => {
+                setReviews(data)
+                setLoading(true);
+            });
     }, [])
 
 
 
     return (
-        <div className="reviews container">
+        <div className="reviews container" id="reviews">
             <h2 className="reviewTitle"> Reviews </h2>
-            <Slider {...settings}>
-                {
-                    reviews.map(review => <div
-                        key={review._id}
-                    >
-                        <div className="reviewCart">
-                            <img style={{ width: '5rem', height: '5rem', borderRadius: '50%', margin: 'auto' }} src={review?.img} alt="" />
-                            <h6>{review?.name}</h6>
+            {loading ? <>
+                <Slider {...settings}>
+                    {
+                        reviews.map(review => <div
+                            key={review._id}
+                        >
+                            <div className="reviewCart">
+                                <img style={{ width: '5rem', height: '5rem', borderRadius: '50%', margin: 'auto' }} src={review?.img} alt="" />
+                                <h6>{review?.name}</h6>
 
-                            <Rating name="read-only" value={review?.rating} precision={0.5} readOnly /> <br />
-                            <p>{review?.comments}</p>
-                        </div>
+                                <Rating name="read-only" value={review?.rating} precision={0.5} readOnly /> <br />
+                                <p>{review?.comments}</p>
+                            </div>
 
 
-                    </div>)
-                }
-
-            </Slider>
+                        </div>)
+                    }
+                </Slider>
+            </>
+                : <div className='spinner'><Spinner animation="border" variant="primary" /></div>
+            }
         </div>
     );
 }

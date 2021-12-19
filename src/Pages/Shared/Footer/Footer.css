@@ -1,6 +1,6 @@
 footer{
     background: #F7F7F7;
-    margin-top: 10rem;
+    margin-top: 5rem;
 }
 .footer{
     display: flex;
@@ -120,13 +120,6 @@ footer{
     outline: none;
     border: none;
 }
-
-
-
-
-
-
-
 
 footer .shop{
     margin-top: 2rem;

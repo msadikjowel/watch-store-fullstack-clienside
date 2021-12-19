@@ -1,5 +1,20 @@
+@media (max-width: 1200px){
+
+    #banner{
+        padding: 0 1rem;
+    }
+
+    #bannerTitle{
+        font-size: 3rem;
+    }
+}
+@media (max-width: 900px){
+    #bannerTitle{
+        font-size: 2.5rem;
+    }
+}
 @media (max-width: 768px){
-    .bannerTitle{
-        font-size: 50px;
+    #bannerTitle{
+        font-size: 2rem;
     }
 }

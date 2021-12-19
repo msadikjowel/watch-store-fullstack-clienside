@@ -30,13 +30,16 @@ const Register = () => {
     // register
     const handleRegister = e => {
 
+        e.preventDefault();
         if (loginData.password !== loginData.password2) {
             setError(true);
             alert('Password not matched, please try again')
-            return;
+            // return;
+        }
+        else {
+            setError(false);
         }
         registerUser(loginData.name, loginData.email, loginData.password, history, location);
-        e.preventDefault();
     };
 
     return (
@@ -111,11 +114,11 @@ const Register = () => {
 
                         {user?.email && <Alert severity="success">Registration Successfull !</Alert>}
 
-                        {authError && <Alert severity="error">{authError}</Alert>
-                        }
+                        {/* {authError && <Alert severity="error">Registraion failed. Please check your retype password. Password length must be 6 characters long.</Alert>
+                        } */}
 
-                        {error && <Alert severity="error">Password not mathed, please try again</Alert>
-                        }
+                        {/* {error && <Alert severity="error">Registraion failed. Please check your retype password. Password length must be 6 characters long.</Alert>
+                        } */}
 
 
                     </Grid>
