@@ -1,0 +1,140 @@
+#supportImg{
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* border: 1px solid red; */
+}
+
+#supportImg img{
+    width: 100%;
+}
+
+#supportImg h2{
+    position: absolute;
+    /* border: 1px solid red; */
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5rem;
+}
+
+.supportCategory{
+    /* width: 50vw; */
+    margin: 2vh 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.supportCategory img{
+    width: 5rem;
+}
+
+.technicalSupport, .inquerySupport, .salesEventSupport{
+    margin: 3rem 5rem;
+    text-align: center;
+    cursor: pointer;
+    color: rgb(116, 112, 112);
+}
+
+.technicalSupport:hover{
+    color: rgb(48, 48, 204);
+    transition: none;
+}
+.inquerySupport:hover{
+    color: rgb(48, 48, 204);
+    transition: none;
+}
+.salesEventSupport:hover{
+    color: rgb(48, 48, 204);
+    transition: none;
+}
+
+.technicalSupportDesc img{
+    width: 20rem;
+}
+
+.step-1{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    height: 40vh;
+    margin-bottom: 4rem;
+    border-bottom: .5px solid rgb(223, 222, 222);
+}
+
+
+
+.step-1 img{
+    width: auto;
+    height: 100%;
+}
+
+.step-text{
+    width: 50%;
+}
+.step-text4{
+    width: 100%;
+}
+
+.step-text p:first-child, .step-text4 p:first-child{
+    color: rgb(48, 48, 204);
+}
+
+
+
+
+
+
+/* media queries */
+
+@media (max-width: 1200px){
+    .step-1{
+        width: 75%;
+    }
+}
+
+@media (max-width: 992px){
+    #supportImg h2{
+        font-size: 2rem;
+    }
+
+    .technicalSupport, .inquerySupport, .salesEventSupport{
+        margin: 5px 2rem;
+    }
+
+    .step-1{
+        width: 100%;
+    }
+}
+@media (max-width: 768px){
+    #supportImg h2{
+        font-size: 1.5rem;
+        
+    }
+
+    .step-1{
+        display: block;
+        height: auto;
+
+    }
+
+    .step-text{
+        width: 100%;
+    }
+}
+@media (max-width: 400px){
+    #supportImg h2{
+        font-size: 1rem;
+    }
+
+    .supportCategory{
+        display: block;
+    }
+
+   
+}

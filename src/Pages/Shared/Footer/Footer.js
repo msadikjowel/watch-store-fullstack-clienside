@@ -10,16 +10,16 @@ const Footer = () => {
                 <div className="quick-links">
                     <ul>
                         <h4>Quick Links</h4>
-                        <NavLink to='/'>
+                        <NavLink to='/home'>
                             <li>Home</li>
                         </NavLink>
-                        <NavLink to='/'>
+                        <NavLink to='/allServices'>
                             <li>Store</li>
                         </NavLink>
-                        <NavLink to='/'>
+                        <NavLink to='/allServices'>
                             <li>Watch</li>
                         </NavLink>
-                        <NavLink to='/'>
+                        <NavLink to='/support'>
                             <li>Support</li>
                         </NavLink>
                     </ul>
@@ -28,13 +28,13 @@ const Footer = () => {
                 <div className="account">
                     <ul>
                         <h4>Account</h4>
-                        <NavLink to='/'>
+                        <NavLink to='/profile'>
                             <li>My Account</li>
                         </NavLink>
-                        <NavLink to='/'>
+                        <NavLink to='/login'>
                             <li>Login</li>
                         </NavLink>
-                        <NavLink to='/'>
+                        <NavLink to='/register'>
                             <li>Register</li>
                         </NavLink>
                     </ul>

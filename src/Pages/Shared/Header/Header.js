@@ -33,11 +33,11 @@ const Header = () => {
                             {/* <Link className='navlink' to='#reviews' smooth activeStyle={{
                                 fontWeight: "600",
                                 color: "black"
-                            }}>Reviews</Link>
-                            <Link className='navlink' to='#support' activeStyle={{
+                            }}>Reviews</Link>*/}
+                            <Link className='navlink' to='/support' activeStyle={{
                                 fontWeight: "600",
                                 color: "black"
-                            }}>Support</Link> */}
+                            }}>Support</Link>
                             <NavLink className='navlink' activeStyle={{
                                 fontWeight: "600",
                                 color: "black"
@@ -62,7 +62,7 @@ const Header = () => {
                                     fontWeight: "600",
                                     color: "black"
                                 }}>Reviews</Link>
-                                <Link className='navlink' to='#support' activeStyle={{
+                                <Link className='navlink' to='/support' activeStyle={{
                                     fontWeight: "600",
                                     color: "black"
                                 }}>Support</Link>

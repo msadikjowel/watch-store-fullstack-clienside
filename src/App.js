@@ -20,6 +20,8 @@ import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
 import Profile from './Pages/Profile/Profile';
 import NotFound from './Pages/NotFound/NotFound';
 import Reviews from './Pages/Home/Reviews/Reviews';
+import Support from './Pages/Support/Support';
+import Technical from './Pages/Support/Technical/Technical';
 
 const theme = createTheme({
   typography: {
@@ -48,12 +50,16 @@ function App() {
               <Home></Home>
             </Route>
 
-            <Route path='*/#reviews'
-              component={Home}
-            />
-
             <Route path='/allServices'>
               <AllServices></AllServices>
+            </Route>
+
+            <Route path='/support'>
+              <Support></Support>
+            </Route>
+
+            <Route path='/technicalSupport'>
+              <Technical></Technical>
             </Route>
 
             <Route path='/login'>

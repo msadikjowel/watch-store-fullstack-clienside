@@ -1,14 +1,25 @@
 .navbar{
     background-color: #f7f7f7;
+    /* border: 1px solid red; */
+    height: 50px;
 }
 
 .navlink{
     text-decoration: none;
     color: #666;
+    font-weight: 300;
+    /* font-size: .9rem; */
     margin-right: 50px;
     margin-top: 5px;
 }
 
 
-
+@media (max-width: 400px){
+    .navbar{
+        height: 100px;
+    }
+    .navlink{
+        display: block;
+    }
+}
 

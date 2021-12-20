@@ -91,7 +91,7 @@
 
 @media (max-width: 400px){
     .features-container{
-        width: 15rem;
-        
+        width: 20rem;
+        /* padding: 1rem; */
     }
 }
