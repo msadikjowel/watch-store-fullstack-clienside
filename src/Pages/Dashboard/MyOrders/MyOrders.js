@@ -99,13 +99,13 @@ const MyOrders = () => {
                                 <StyledTableCell align="center" >
 
                                     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-
-                                        <NavLink to='/dashboard/payment'>
-                                            <Button title="Pay to confirm" sx={{ color: 'green', fontSize: '1rem' }}>{dollerIcon}</Button>
-                                        </NavLink>
-
+                                        {product?.payment ? 'Paid' :
+                                            <NavLink to={`/dashboard/payment/${product._id}`}>
+                                                <Button title="Pay" sx={{ color: 'green', fontSize: '1rem' }}>{dollerIcon}</Button>
+                                            </NavLink>
+                                        }
                                         <Button
-                                            title="cancel order"
+                                            title="Cancel order"
                                             sx={{ color: 'red' }}
                                             onClick={() => handleDeleteProduct(product._id)}
                                         >{deleteIcon}

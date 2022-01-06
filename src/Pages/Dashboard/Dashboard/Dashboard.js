@@ -31,6 +31,7 @@ import AddProducts from '../Admin/AddProducts/AddProducts';
 import MakeAdmin from '../Admin/MakeAdmin/MakeAdmin';
 import ManageProducts from '../Admin/ManageProducts/ManageProducts'
 import useAuth from '../../../hooks/useAuth';
+import Success from '../Payment/Success';
 
 
 
@@ -71,7 +72,7 @@ function Dashboard(props) {
 
                     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <NavLink to={`${url}/myOrders`} className="dashLink" activeClassName='dashActive'>My Orders</NavLink>
-                        <NavLink to={`${url}/payment`} className="dashLink" activeClassName='dashActive'>Payment</NavLink>
+                        {/* <NavLink to={`${url}/payment`} className="dashLink" activeClassName='dashActive'>Payment</NavLink> */}
                         <NavLink to={`${url}/addReview`} className="dashLink" activeClassName='dashActive'>Review</NavLink>
                     </Box>
                 }
@@ -159,8 +160,11 @@ function Dashboard(props) {
                     <Route path={`${path}/myOrders`}>
                         <MyOrders />
                     </Route>
-                    <Route path={`${path}/payment`}>
+                    <Route path={`${path}/payment/:payId`}>
                         <Payment />
+                    </Route>
+                    <Route path={`${path}/payment/success`}>
+                        <Success />
                     </Route>
                     <Route path={`${path}/addReview`}>
                         <Review />
