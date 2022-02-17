@@ -19,8 +19,8 @@ const WatchVideo = () => {
                             Since the watch is such a popular fashion accessory and is seen as an essential wardrobe piece for both men and women.
                         </Typography>
                     </Grid>
-                    <Grid item lg={12} sx={{ margin: 'auto' }}>
-                        <ReactPlayer width="100%" controls url='https://www.youtube.com/watch?v=MMdQ-gWBNZE' />
+                    <Grid item lg={12} md={12} sm={12} xs={12} sx={{ margin: 'auto', height: '75vh' }}>
+                        <ReactPlayer width="100%" height="75vh" sx={{ display: 'flex', alignItems: "center", justifyContent: "center" }} controls url='https://www.youtube.com/watch?v=MMdQ-gWBNZE' />
 
 
                     </Grid>
