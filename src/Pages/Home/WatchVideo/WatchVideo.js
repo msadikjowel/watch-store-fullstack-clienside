@@ -20,7 +20,7 @@ const WatchVideo = () => {
                         </Typography>
                     </Grid>
                     <Grid item lg={12} md={12} sm={12} xs={12} sx={{ margin: 'auto', height: '75vh' }}>
-                        <ReactPlayer width="100%" height="75vh" sx={{ display: 'flex', alignItems: "center", justifyContent: "center" }} controls url='https://www.youtube.com/watch?v=MMdQ-gWBNZE' />
+                        <ReactPlayer width="100%" height="75vh" sx={{ display: 'flex', alignItems: "center", justifyContent: "center" }} controls url='https://youtu.be/s9bnEUQRY2U' />
 
 
                     </Grid>
