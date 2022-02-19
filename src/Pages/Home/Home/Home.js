@@ -9,6 +9,7 @@ import HomeServices from '../HomeServices/HomeServices';
 import Reviews from '../Reviews/Reviews';
 import WatchVideo from '../WatchVideo/WatchVideo';
 import ClockLoader from "react-spinners/ClockLoader";
+import CookieConsent from 'react-cookie-consent';
 
 
 
@@ -38,6 +39,16 @@ const Home = () => {
                         <Categories></Categories>
                         <Reviews></Reviews>
                         <Footer></Footer>
+
+                        {/* website cookies accept popup */}
+                        <CookieConsent
+                            location="bottom"
+                            buttonText="Accept"
+                            style={{ background: 'rgb(23,23,219)' }}
+                            buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+                        >
+                            This website uses cookies in order to offer you the most relavant information. Please accept cookies for optimal performance.
+                        </CookieConsent>
                     </>
             }
         </div>
