@@ -28,7 +28,7 @@ const Banner = () => {
                         </NavLink>
                     </Grid>
                     <Grid item xs={12} md={7} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                        <LazyLoadImage effect='blur' style={{ width: '100%' }} src={bg} alt="" />
+                        <img style={{ width: '100%' }} src={bg} alt="" />
                     </Grid>
 
                 </Grid>
