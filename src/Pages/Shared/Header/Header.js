@@ -6,8 +6,6 @@ import { HashLink as Link } from 'react-router-hash-link';
 import logo from '../../../img/logo.png'
 import useAuth from '../../../hooks/useAuth';
 import { Box } from '@mui/material';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Header = () => {
     const { user, logOut } = useAuth();
@@ -15,7 +13,7 @@ const Header = () => {
         <Navbar collapseOnSelect expand="lg" bg="" className='navbar' variant="light" sticky='top'>
             <Container>
 
-                <NavLink to='/home' ><LazyLoadImage effect='blur' style={{ width: '30%', paddingTop: '20px', paddingBottom: '20px' }} src={logo} alt="" /></NavLink>
+                <NavLink to='/home' ><img style={{ width: '30%', paddingTop: '20px', paddingBottom: '20px' }} src={logo} alt="" /></NavLink>
                 <Navbar.Toggle bg='dark' aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">

@@ -12,8 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGreaterThan } from '@fortawesome/free-solid-svg-icons'
 import Reviews from '../Home/Reviews/Reviews';
 import Footer from '../Shared/Footer/Footer';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+
 
 const element = <FontAwesomeIcon icon={faGreaterThan} />
 
@@ -23,25 +22,25 @@ const Support = () => {
             <Header></Header>
             <div id='supportImg'>
                 <h2>Watch Station Support</h2>
-                <LazyLoadImage className='img' src={supportImg} alt="" />
+                <img className='img' src={supportImg} alt="" />
             </div>
 
             <div className="supportCategory">
                 <Link className='navlink' to='#technicalSupportDesc' smooth>
                     <div className="technicalSupport">
-                        <LazyLoadImage effect='blur' src={technicalSupportImg} alt="" />
+                        <img src={technicalSupportImg} alt="" />
                         <h6>Technical Support</h6>
                     </div></Link>
                 <Link className='navlink' to='#technicalSupportDesc' smooth>
                     <div className="inquerySupport">
-                        <LazyLoadImage effect='blur' src={inquerySupportImg} alt="" />
+                        <img src={inquerySupportImg} alt="" />
                         <h6>Inquery Service</h6>
                     </div>
                 </Link>
                 <Link className='navlink' to='#technicalSupportDesc' smooth>
 
                     <div className="salesEventSupport">
-                        <LazyLoadImage effect='blur' src={salesSupportImg} alt="" />
+                        <img src={salesSupportImg} alt="" />
                         <h6>Sales Support</h6>
                     </div>
                 </Link>
@@ -50,7 +49,7 @@ const Support = () => {
 
             <div className="descriptionContainer container">
                 <div className="technicalSupportDesc mb-5" id='technicalSupportDesc'>
-                    <LazyLoadImage effect="blur" className='img-fluid' src={watch1} alt="" />
+                    <img className='img-fluid' src={watch1} alt="" />
                     <h2>Get started with your watch</h2>
                     <p>Grab your Phone and follow these simple steps to get up and running with your new Watch.</p>
                     <Link className='navlink' to='/technicalSupport' style={{ color: 'rgb(48, 48, 204)' }}>

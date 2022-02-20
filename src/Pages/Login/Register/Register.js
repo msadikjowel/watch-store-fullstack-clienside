@@ -5,8 +5,6 @@ import login from '../../../img/login.png'
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import Header from '../../Shared/Header/Header';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Register = () => {
 
@@ -50,7 +48,7 @@ const Register = () => {
             <Container sx={{ width: '100%' }}>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
                     <Grid item xs={12} md={6}>
-                        <LazyLoadImage effect='blur' style={{ width: '100%' }} src={login} alt="" />
+                        <img style={{ width: '100%' }} src={login} alt="" />
                     </Grid>
 
                     <Grid item xs={12} md={6} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
