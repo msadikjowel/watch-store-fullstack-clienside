@@ -23,25 +23,25 @@ const Support = () => {
             <Header></Header>
             <div id='supportImg'>
                 <h2>Watch Station Support</h2>
-                <img src={supportImg} alt="" />
+                <LazyLoadImage className='img' src={supportImg} alt="" />
             </div>
 
             <div className="supportCategory">
                 <Link className='navlink' to='#technicalSupportDesc' smooth>
                     <div className="technicalSupport">
-                        <img src={technicalSupportImg} alt="" />
+                        <LazyLoadImage effect='blur' src={technicalSupportImg} alt="" />
                         <h6>Technical Support</h6>
                     </div></Link>
                 <Link className='navlink' to='#technicalSupportDesc' smooth>
                     <div className="inquerySupport">
-                        <img src={inquerySupportImg} alt="" />
+                        <LazyLoadImage effect='blur' src={inquerySupportImg} alt="" />
                         <h6>Inquery Service</h6>
                     </div>
                 </Link>
                 <Link className='navlink' to='#technicalSupportDesc' smooth>
 
                     <div className="salesEventSupport">
-                        <img src={salesSupportImg} alt="" />
+                        <LazyLoadImage effect='blur' src={salesSupportImg} alt="" />
                         <h6>Sales Support</h6>
                     </div>
                 </Link>

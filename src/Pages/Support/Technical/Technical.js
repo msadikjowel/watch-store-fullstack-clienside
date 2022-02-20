@@ -2,6 +2,8 @@ import React from 'react';
 import Reviews from '../../Home/Reviews/Reviews';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Technical = () => {
     return (
@@ -22,7 +24,7 @@ const Technical = () => {
                         <p>To turn on your Apple Watch, press and hold the side button until you see the Apple logo. This may take a few minutes. </p>
                     </div>
                     <div>
-                        <img className='img-fluid' src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/applewatch/watchos8-series7-watch-turn-on.png" alt="" />
+                        <LazyLoadImage className='img-fluid' src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/applewatch/watchos8-series7-watch-turn-on.png" alt="" style={{ width: 'auto', height: '100%' }} />
                     </div>
                 </div>
                 <div className="step-1 ">
@@ -32,7 +34,7 @@ const Technical = () => {
                         <p>Wait for the "Use your iPhone to set up this Apple Watch" message to appear on your iPhone, then tap Continue. If you don't see this message, open the Watch app on your iPhone, tap All Watches, then tap Pair New Watch. </p>
                     </div>
                     <div>
-                        <img className='img-fluid' src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/applewatch/watchos8-series7-iphone12-pro-setup-put-on-watch.png" alt="" />
+                        <LazyLoadImage className='img-fluid' src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/applewatch/watchos8-series7-iphone12-pro-setup-put-on-watch.png" alt="" />
                     </div>
                 </div>
                 <div className="step-1 ">
@@ -45,7 +47,7 @@ const Technical = () => {
                         </p>
                     </div>
                     <div>
-                        <img className='img-fluid' src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/applewatch/watchos8-series7-ios15-iphone12-pro-setup-pair-animation.png" alt="" />
+                        <LazyLoadImage className='img-fluid' src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/applewatch/watchos8-series7-ios15-iphone12-pro-setup-pair-animation.png" alt="" />
                     </div>
                 </div>
                 <div className="step-1 ">
@@ -109,7 +111,7 @@ const Technical = () => {
                             On your iPhone, tap Create a Passcode or Add a Long Passcode, then switch to your Apple Watch to enter your new code. To skip, tap Don't Add Passcode. </p>
                     </div>
                     <div>
-                        <img className='img-fluid' src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/applewatch/watchos8-ios15-iphone12-pro-setup-create-passcode.png" alt="" />
+                        <LazyLoadImage className='img-fluid' src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/applewatch/watchos8-ios15-iphone12-pro-setup-create-passcode.png" alt="" />
                     </div>
                 </div>
                 <div className="step-1 ">
@@ -124,7 +126,7 @@ const Technical = () => {
                         </p>
                     </div>
                     <div>
-                        <img className='img-fluid' src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/applewatch/watchos8-ios15-iphone12-pro-setup-install-available-apps.png" alt="" />
+                        <LazyLoadImage className='img-fluid' src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/applewatch/watchos8-ios15-iphone12-pro-setup-install-available-apps.png" alt="" />
                     </div>
                 </div>
                 <div className="step-1 ">
@@ -139,7 +141,7 @@ const Technical = () => {
                         </p>
                     </div>
                     <div>
-                        <img className='img-fluid' src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/applewatch/watchos8-ios15-iphone12-pro-setup-watch-syncing.png" alt="" />
+                        <LazyLoadImage className='img-fluid' src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/applewatch/watchos8-ios15-iphone12-pro-setup-watch-syncing.png" alt="" />
                     </div>
                 </div>
             </div>

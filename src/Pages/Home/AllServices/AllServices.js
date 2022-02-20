@@ -33,7 +33,7 @@ const AllServices = () => {
                             className="carts">
                             <div className="cart">
                                 <div className="cart-img">
-                                    <LazyLoadImage effect='blur' className='img-fluid' src={service?.img} alt="" />
+                                    <LazyLoadImage effect='blur' className='img-fluid' src={service?.img} alt="watch image" placeholderSrc={process.env.PUBLIC_URL + '/logo192.png'} />
 
                                 </div>
                                 <div className="cart-text">
