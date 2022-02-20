@@ -12,6 +12,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGreaterThan } from '@fortawesome/free-solid-svg-icons'
 import Reviews from '../Home/Reviews/Reviews';
 import Footer from '../Shared/Footer/Footer';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const element = <FontAwesomeIcon icon={faGreaterThan} />
 
@@ -48,7 +50,7 @@ const Support = () => {
 
             <div className="descriptionContainer container">
                 <div className="technicalSupportDesc mb-5" id='technicalSupportDesc'>
-                    <img className='img-fluid' src={watch1} alt="" />
+                    <LazyLoadImage effect="blur" className='img-fluid' src={watch1} alt="" />
                     <h2>Get started with your watch</h2>
                     <p>Grab your Phone and follow these simple steps to get up and running with your new Watch.</p>
                     <Link className='navlink' to='/technicalSupport' style={{ color: 'rgb(48, 48, 204)' }}>

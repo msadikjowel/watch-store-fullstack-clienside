@@ -4,7 +4,8 @@ import { Spinner } from "react-bootstrap";
 import Slider from "react-slick";
 import './Review.css'
 
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 
@@ -69,7 +70,7 @@ const Reviews = () => {
                             key={review._id}
                         >
                             <div className="reviewCart">
-                                <img style={{ width: '5rem', height: '5rem', borderRadius: '50%', margin: 'auto' }} src={review?.img} alt="" />
+                                <LazyLoadImage effect="blur" style={{ width: '5rem', height: '5rem', borderRadius: '50%', margin: 'auto' }} src={review?.img} alt="" />
                                 <h6>{review?.name}</h6>
 
                                 <Rating name="read-only" value={review?.rating} precision={0.5} readOnly /> <br />

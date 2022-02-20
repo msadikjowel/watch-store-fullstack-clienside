@@ -5,6 +5,8 @@ import React from 'react';
 import bg from './../../../img/bg.png'
 import './Banner.css'
 import { NavLink } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Banner = () => {
     return (
@@ -26,7 +28,7 @@ const Banner = () => {
                         </NavLink>
                     </Grid>
                     <Grid item xs={12} md={7} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                        <img style={{ width: '100%' }} src={bg} alt="" />
+                        <LazyLoadImage effect='blur' style={{ width: '100%' }} src={bg} alt="" />
                     </Grid>
 
                 </Grid>

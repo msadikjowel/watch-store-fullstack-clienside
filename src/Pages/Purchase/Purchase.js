@@ -9,9 +9,8 @@ import './Purchase.css'
 import Footer from '../Shared/Footer/Footer';
 import { useForm } from "react-hook-form";
 import useAuth from '../../hooks/useAuth';
-
-
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Purchase = () => {
     // all state
@@ -64,7 +63,7 @@ const Purchase = () => {
                     <Grid container spacing={2} sx={{ padding: 1 }}>
 
                         <Grid item xs={12} md={6}>
-                            <img style={{ width: '50%', margin: 'auto', display: 'flex' }} src={product?.img} alt="Timex watch" /> <br />
+                            <LazyLoadImage effect='blur' style={{ width: '50%', margin: 'auto', display: 'flex' }} src={product?.img} alt="Timex watch" /> <br />
 
                             <Typography variant="h6" sx={{ fontWeight: '600' }}>
                                 Price: <span className='price'>${product?.price}</span>

@@ -6,6 +6,8 @@ import Footer from '../../Shared/Footer/Footer';
 import { NavLink } from 'react-router-dom';
 import { Spinner } from 'react-bootstrap';
 import Reviews from '../Reviews/Reviews';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const AllServices = () => {
     const [allServices, setAllServices] = useState([]);
@@ -31,7 +33,7 @@ const AllServices = () => {
                             className="carts">
                             <div className="cart">
                                 <div className="cart-img">
-                                    <img className='img-fluid' src={service?.img} alt="" />
+                                    <LazyLoadImage effect='blur' className='img-fluid' src={service?.img} alt="" />
 
                                 </div>
                                 <div className="cart-text">

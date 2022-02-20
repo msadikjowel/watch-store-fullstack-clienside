@@ -5,8 +5,8 @@ import Container from '@mui/material/Container';
 import './HomeServices.css'
 import { NavLink } from 'react-router-dom';
 import { Spinner } from 'react-bootstrap';
-
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const HomeServices = () => {
     const [services, setServices] = useState([]);
@@ -30,7 +30,7 @@ const HomeServices = () => {
                             className="carts">
                             <div className="cart">
                                 <div className="cart-img">
-                                    <img className='img-fluid' src={service?.img} alt="" />
+                                    <LazyLoadImage effect='blur' className='img-fluid' src={service?.img} alt="" />
 
                                 </div>
                                 <div className="cart-text">
