@@ -14,7 +14,8 @@ const Header = () => {
             <Container>
 
                 <NavLink to='/home' ><img style={{ width: '30%', paddingTop: '20px', paddingBottom: '20px' }} src={logo} alt="" /></NavLink>
-                <Navbar.Toggle bg='dark' aria-controls="responsive-navbar-nav" />
+
+                <Navbar.Toggle bg='dark' className="toggle" aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
 
@@ -22,34 +23,33 @@ const Header = () => {
                     </Nav>
                     <Nav>
                         {user?.email ? <Box>
-                            <NavLink className='navlink' to='/home' activeStyle={{
-                                fontWeight: "600",
-                                color: "black"
-                            }}>Home</NavLink>
-                            <NavLink className='navlink' to='/allServices' activeStyle={{
-                                fontWeight: "600",
-                                color: "black"
-                            }}>Store</NavLink>
-                            {/* <Link className='navlink' to='#reviews' smooth activeStyle={{
-                                fontWeight: "600",
-                                color: "black"
-                            }}>Reviews</Link>*/}
-                            <Link className='navlink' to='/support' activeStyle={{
-                                fontWeight: "600",
-                                color: "black"
-                            }}>Support</Link>
-                            <NavLink className='navlink' activeStyle={{
-                                fontWeight: "600",
-                                color: "black"
-                            }} to='/dashboard'>Dashboard</NavLink>
-                            <NavLink className='navlink' activeStyle={{
-                                fontWeight: "600",
-                                color: "black"
-                            }} to='/profile'>{user?.displayName}</NavLink>
-                            <NavLink className='navlink' to='/home' onClick={logOut}>Logout</NavLink>
+                            <Box className="headerMy">
+                                <NavLink className='navlink' to='/home' activeStyle={{
+                                    fontWeight: "600",
+                                    color: "black"
+                                }}>Home</NavLink>
+                                <NavLink className='navlink' to='/allServices' activeStyle={{
+                                    fontWeight: "600",
+                                    color: "black"
+                                }}>Store</NavLink>
+
+                                <NavLink className='navlink' to='/support' activeStyle={{
+                                    fontWeight: "600",
+                                    color: "black"
+                                }}>Support</NavLink>
+                                <NavLink className='navlink' activeStyle={{
+                                    fontWeight: "600",
+                                    color: "black"
+                                }} to='/dashboard'>Dashboard</NavLink>
+                                <NavLink className='navlink' activeStyle={{
+                                    fontWeight: "600",
+                                    color: "black"
+                                }} to='/profile'>{user?.displayName}</NavLink>
+                                <NavLink className='navlink' to='/home' onClick={logOut}>Logout</NavLink>
+                            </Box>
                         </Box>
                             :
-                            <div>
+                            <Box>
                                 <NavLink className='navlink' to='/home' activeStyle={{
                                     fontWeight: "600",
                                     color: "black"
@@ -70,7 +70,7 @@ const Header = () => {
                                     fontWeight: "600",
                                     color: "black"
                                 }}>Login</NavLink>
-                            </div>
+                            </Box>
                         }
 
                     </Nav>

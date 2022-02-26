@@ -63,7 +63,7 @@ const Purchase = () => {
                     <Grid container spacing={2} sx={{ padding: 1 }}>
 
                         <Grid item xs={12} md={6}>
-                            <LazyLoadImage effect='blur' style={{ width: '50%', margin: 'auto', display: 'flex' }} src={product?.img} alt="Timex watch" /> <br />
+                            <LazyLoadImage style={{ width: '50%', margin: 'auto', display: 'flex' }} src={product?.img} alt="Timex watch" /> <br />
 
                             <Typography variant="h6" sx={{ fontWeight: '600' }}>
                                 Price: <span className='price'>${product?.price}</span>

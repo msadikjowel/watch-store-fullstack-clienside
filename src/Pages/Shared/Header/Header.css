@@ -1,7 +1,7 @@
 .navbar{
     background-color: #f7f7f7;
     /* border: 1px solid red; */
-    height: 50px;
+    /* height: 50px; */
 }
 
 .navlink{
@@ -14,12 +14,26 @@
 }
 
 
-@media (max-width: 400px){
-    .navbar{
-        height: 100px;
+@media (max-width: 1200px){
+       .navlink{
+        margin-right: 20px;
     }
-    .navlink{
+
+}
+
+@media (max-width: 400px){
+       .navlink{
         display: block;
     }
+
 }
+
+@media (max-width: 991px){
+    .headerMy{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 
