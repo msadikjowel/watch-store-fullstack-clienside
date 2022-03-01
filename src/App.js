@@ -1,5 +1,5 @@
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 import './App.css';
-
 import {
   BrowserRouter as Router,
   Switch,
@@ -92,6 +92,10 @@ function App() {
         </Router>
       </AuthProvider>
 
+      <MessengerCustomerChat
+        pageId="108442081781801"
+        appId="671030274038529"
+      />
     </ThemeProvider>
   );
 }

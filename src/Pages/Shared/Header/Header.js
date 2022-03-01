@@ -49,7 +49,7 @@ const Header = () => {
                             </Box>
                         </Box>
                             :
-                            <Box>
+                            <Box className="headerMy">
                                 <NavLink className='navlink' to='/home' activeStyle={{
                                     fontWeight: "600",
                                     color: "black"
