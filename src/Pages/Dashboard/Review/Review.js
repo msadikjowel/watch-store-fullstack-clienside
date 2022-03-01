@@ -1,5 +1,6 @@
 import { TextField, Button, Alert } from '@mui/material';
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { useForm } from "react-hook-form";
 import useAuth from '../../../hooks/useAuth';
 
@@ -25,6 +26,11 @@ const Review = () => {
 
     return (
         <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', margin: 'auto', alignItems: 'center' }}>
+            {/* react helmet for dynamic tab name */}
+            <Helmet>
+                <title>Please make a review</title>
+            </Helmet>
+
             <h2 style={{ fontWeight: '600' }}>Please write a review</h2>
             <p>Your review helps us to improve our feature and functionality.</p>
 

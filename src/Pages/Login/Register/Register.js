@@ -5,6 +5,7 @@ import login from '../../../img/login.png'
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import Header from '../../Shared/Header/Header';
+import { Helmet } from 'react-helmet';
 
 const Register = () => {
 
@@ -44,6 +45,11 @@ const Register = () => {
 
     return (
         <>
+            {/* react helmet for dynamic tab name */}
+            <Helmet>
+                <title>Please Register to Watch Station</title>
+            </Helmet>
+
             <Header></Header>
             <Container sx={{ width: '100%' }}>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>

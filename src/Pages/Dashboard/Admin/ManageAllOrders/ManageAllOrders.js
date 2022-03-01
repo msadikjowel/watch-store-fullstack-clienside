@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import { Box } from '@mui/system';
 import useAuth from '../../../../hooks/useAuth';
+import { Helmet } from 'react-helmet';
 
 const deleteIcon = <FontAwesomeIcon icon={faTrashAlt} />
 const okIcon = <FontAwesomeIcon icon={faCheckCircle} />
@@ -92,6 +93,11 @@ const ManageAllOrders = () => {
 
     return (
         <div>
+            {/* react helmet for dynamic tab name */}
+            <Helmet>
+                <title>All orders placed | Watch Station</title>
+            </Helmet>
+
             <h2 style={{ textAlign: 'center', margin: '3rem 0', fontWeight: '600' }}>All Users Orders: {allPurchased.length}</h2>
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 'auto' }} aria-label="User purchased products table">

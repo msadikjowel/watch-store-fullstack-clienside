@@ -11,6 +11,7 @@ import { useForm } from "react-hook-form";
 import useAuth from '../../hooks/useAuth';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import { Helmet } from 'react-helmet';
 
 const Purchase = () => {
     // all state
@@ -55,6 +56,11 @@ const Purchase = () => {
 
     return (
         <>
+            {/* react helmet for dynamic tab name */}
+            <Helmet>
+                <title>Confirm your purchase</title>
+            </Helmet>
+
             <Header></Header>
             <Container>
                 <h2 className='purchaseTitle'>Confirm Your Purchase for <span>{product?.name}</span> </h2>

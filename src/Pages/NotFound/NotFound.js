@@ -1,10 +1,15 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { NavLink } from 'react-router-dom';
 import './NotFound.css'
 
 const NotFound = () => {
     return (
         <div>
+            {/* react helmet for dynamic tab name */}
+            <Helmet>
+                <title>Nothing found. Go back</title>
+            </Helmet>
             <div className="notfound">
 
             </div>

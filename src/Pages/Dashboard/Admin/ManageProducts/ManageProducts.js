@@ -11,6 +11,7 @@ import Paper from '@mui/material/Paper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { Box } from '@mui/system';
+import { Helmet } from 'react-helmet';
 
 const deleteIcon = <FontAwesomeIcon icon={faTrashAlt} />
 
@@ -67,6 +68,11 @@ const ManageProducts = () => {
     }
     return (
         <div>
+            {/* react helmet for dynamic tab name */}
+            <Helmet>
+                <title>Manage all products | Watch Station</title>
+            </Helmet>
+
             <h2 style={{ textAlign: 'center', margin: '3rem 0', fontWeight: '600' }}>All Products: {allProducts.length}</h2>
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 'auto' }} aria-label="User purchased products table">

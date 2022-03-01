@@ -22,6 +22,7 @@ import NotFound from './Pages/NotFound/NotFound';
 import Reviews from './Pages/Home/Reviews/Reviews';
 import Support from './Pages/Support/Support';
 import Technical from './Pages/Support/Technical/Technical';
+import { Helmet } from 'react-helmet';
 
 const theme = createTheme({
   typography: {
@@ -37,6 +38,13 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+
+      {/* react helmet for dynamic tab name */}
+      <Helmet>
+        <title>Best Watch Selling Website | Watch Station</title>
+        <meta name="description" content="Watch selling website" />
+        <meta name="keyword" content="Watch, best watch" />
+      </Helmet>
 
       <AuthProvider>
         <Router>

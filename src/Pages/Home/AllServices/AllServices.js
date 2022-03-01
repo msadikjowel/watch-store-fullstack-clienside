@@ -8,6 +8,7 @@ import { Spinner } from 'react-bootstrap';
 import Reviews from '../Reviews/Reviews';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import { Helmet } from 'react-helmet';
 
 const AllServices = () => {
     const [allServices, setAllServices] = useState([]);
@@ -23,6 +24,11 @@ const AllServices = () => {
     }, [])
     return (
         <>
+            {/* react helmet for dynamic tab name */}
+            <Helmet>
+                <title>All Products | Watch Station</title>
+            </Helmet>
+
             <Header></Header>
             <Container>
                 <h2 className='productsTitle'>ALL WATCHES</h2>

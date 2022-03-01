@@ -32,6 +32,7 @@ import MakeAdmin from '../Admin/MakeAdmin/MakeAdmin';
 import ManageProducts from '../Admin/ManageProducts/ManageProducts'
 import useAuth from '../../../hooks/useAuth';
 import Success from '../Payment/Success';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -86,6 +87,11 @@ function Dashboard(props) {
 
     return (
         <Box sx={{ display: 'flex' }}>
+            {/* react helmet for dynamic tab name */}
+            <Helmet>
+                <title>Welcome to Dashboard | Watch Station</title>
+            </Helmet>
+
             <CssBaseline />
             <AppBar
                 position="fixed"

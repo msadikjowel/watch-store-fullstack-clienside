@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt, faHandHoldingUsd } from '@fortawesome/free-solid-svg-icons'
 import { Box } from '@mui/system';
 import { NavLink } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const deleteIcon = <FontAwesomeIcon icon={faTrashAlt} />
 const dollerIcon = <FontAwesomeIcon icon={faHandHoldingUsd} />
@@ -71,6 +72,11 @@ const MyOrders = () => {
 
     return (
         <div>
+            {/* react helmet for dynamic tab name */}
+            <Helmet>
+                <title>Your all orders | Watch Station</title>
+            </Helmet>
+
             <h2 style={{ textAlign: 'center', margin: '3rem 0', fontWeight: '600' }}>My All Orders: {purchased.length}</h2>
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 'auto' }} aria-label="User purchased products table">

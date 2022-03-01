@@ -1,5 +1,6 @@
 import { Alert, TextField } from '@mui/material';
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { useForm } from "react-hook-form";
 
 
@@ -31,6 +32,11 @@ const AddProducts = () => {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <h2 style={{ fontWeight: '600', margin: '3rem 0' }}>Add product</h2>
+
+            {/* react helmet for dynamic tab name */}
+            <Helmet>
+                <title>Add your desire product | Watch Station</title>
+            </Helmet>
 
             <form onSubmit={handleSubmit(onSubmit)}>
 

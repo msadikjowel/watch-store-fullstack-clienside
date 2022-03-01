@@ -1,9 +1,15 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const Success = () => {
     return (
         <div>
-            <h3>Congrats for successfully payment</h3>
+            {/* react helmet for dynamic tab name */}
+            <Helmet>
+                <title>Thank you | Watch Station</title>
+            </Helmet>
+
+            <h3>Thank you purchase</h3>
         </div>
     );
 };

@@ -10,6 +10,7 @@ import Reviews from '../Reviews/Reviews';
 import WatchVideo from '../WatchVideo/WatchVideo';
 import ClockLoader from "react-spinners/ClockLoader";
 import CookieConsent from 'react-cookie-consent';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -24,6 +25,11 @@ const Home = () => {
 
     return (
         <div>
+            {/* react helmet for dynamic tab name */}
+            <Helmet>
+                <title>Best Watch Selling Website | Watch Station</title>
+            </Helmet>
+
             {
                 loading ? <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100vh' }}>
 

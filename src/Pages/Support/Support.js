@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGreaterThan } from '@fortawesome/free-solid-svg-icons'
 import Reviews from '../Home/Reviews/Reviews';
 import Footer from '../Shared/Footer/Footer';
+import { Helmet } from 'react-helmet';
 
 
 const element = <FontAwesomeIcon icon={faGreaterThan} />
@@ -19,6 +20,11 @@ const element = <FontAwesomeIcon icon={faGreaterThan} />
 const Support = () => {
     return (
         <>
+            {/* react helmet for dynamic tab name */}
+            <Helmet>
+                <title>Watch Station Support Center</title>
+            </Helmet>
+
             <Header></Header>
             <div id='supportImg'>
                 <h2>Watch Station Support</h2>

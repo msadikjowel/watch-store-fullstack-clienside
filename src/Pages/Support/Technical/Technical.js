@@ -4,10 +4,16 @@ import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import { Helmet } from 'react-helmet';
 
 const Technical = () => {
     return (
         <>
+            {/* react helmet for dynamic tab name */}
+            <Helmet>
+                <title>Technical Support</title>
+            </Helmet>
+
             <Header></Header>
             <div className="technicalSupportDetails container mt-5">
                 <h2>Set up your Watch</h2>

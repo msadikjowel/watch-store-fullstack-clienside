@@ -1,5 +1,6 @@
 import { TextField, Button, Alert } from '@mui/material';
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 const MakeAdmin = () => {
     // all state
@@ -35,6 +36,11 @@ const MakeAdmin = () => {
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column', margin: 'auto', alignItems: 'center' }}>
+            {/* react helmet for dynamic tab name */}
+            <Helmet>
+                <title>Make an admin | Watch Station</title>
+            </Helmet>
+
             <h2>Make an admin</h2>
             <form onSubmit={handleMakeAdmin}>
                 <TextField
